@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 13, 2022 08:47:10 am</span></a>
+<a href="#"><span class="badge badge-primary">Dec 13, 2022 04:43:09 pm</span></a>
 </li>
 </ul>
 </div>
@@ -52,6 +52,11 @@
 <span class="ico"><i class="fa fa-list"></i></span>
 </a>
 </li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -61,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 13, 2022 08:47:10 am</h3>
+<h3>Dec 13, 2022 04:43:09 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 13, 2022 08:48:06 am</h3>
+<h3>Dec 13, 2022 04:44:06 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -157,10 +162,35 @@
 </div></div>
 <script>
 var timeline = {
-"CartPage Feature":30.885,"Login page feature":23.729
+"CartPage Feature":33.258,"Login page feature":22.385
 };
 </script>
 <div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@Regression</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Smoke</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 <div class="col-lg-6 col-md-12 sysenv-container">
 <div class="card">
 <div class="card-header"><p>System/Environment</p></div>
@@ -225,6 +255,12 @@ eventsCount: 5,
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
 </li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@Regression</a><a class="dropdown-item" href="#">@Smoke</a>
+</ul>
+</li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
@@ -235,7 +271,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">CartPage Feature</p>
             <p class="text-sm">
-              <span>08:47:11 am</span> / <span>00:00:30:885</span>
+              <span>16:43:10 pm</span> / <span>00:00:33:258</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -244,9 +280,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">CartPage Feature</h5>
-<span class='badge badge-success'>12.13.2022 08:47:11</span>
-<span class='badge badge-danger'>12.13.2022 08:47:42</span>
-<span class='badge badge-default'>00:00:30:885</span>
+<span class='badge badge-success'>12.13.2022 16:43:10</span>
+<span class='badge badge-danger'>12.13.2022 16:43:44</span>
+<span class='badge badge-default'>00:00:33:258</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -261,47 +297,47 @@ eventsCount: 5,
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.loginPageSteps.user_is_on_home_page()">
+              <div class="step pass-bg" title="parallel.loginPageSteps.user_is_on_home_page()">
                 <span>Given user is on Home Page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.cartPageSteps.user_types_in_the_search_box(java.lang.String)">
+              <div class="step pass-bg" title="parallel.cartPageSteps.user_types_in_the_search_box(java.lang.String)">
                 <span>Given user types "Laptop" in the search box</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.cartPageSteps.user_click_submit_button()">
+              <div class="step pass-bg" title="parallel.cartPageSteps.user_click_submit_button()">
                 <span>When user click submit button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.cartPageSteps.user_selects_product()">
+              <div class="step pass-bg" title="parallel.cartPageSteps.user_selects_product()">
                 <span>And user selects product</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.cartPageSteps.user_switch_tabs()">
+              <div class="step pass-bg" title="parallel.cartPageSteps.user_switch_tabs()">
                 <span>And user switch tab</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.cartPageSteps.user_adds_product_to_cart()">
+              <div class="step pass-bg" title="parallel.cartPageSteps.user_adds_product_to_cart()">
                 <span>And user adds product to cart</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.cartPageSteps.user_checks_the_cart()">
+              <div class="step pass-bg" title="parallel.cartPageSteps.user_checks_the_cart()">
                 <span>And user checks the cart</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.cartPageSteps.user_goes_to_cart()">
+              <div class="step pass-bg" title="parallel.cartPageSteps.user_goes_to_cart()">
                 <span>Then user goes to cart</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.cartPageSteps.user_confirms_cart()">
+              <div class="step pass-bg" title="parallel.cartPageSteps.user_confirms_cart()">
                 <span>And user confirms cart</span>
       <div>
       </div>
@@ -319,7 +355,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">Login page feature</p>
             <p class="text-sm">
-              <span>08:47:42 am</span> / <span>00:00:23:729</span>
+              <span>16:43:44 pm</span> / <span>00:00:22:385</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -328,9 +364,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Login page feature</h5>
-<span class='badge badge-success'>12.13.2022 08:47:42</span>
-<span class='badge badge-danger'>12.13.2022 08:48:06</span>
-<span class='badge badge-default'>00:00:23:729</span>
+<span class='badge badge-success'>12.13.2022 16:43:44</span>
+<span class='badge badge-danger'>12.13.2022 16:44:06</span>
+<span class='badge badge-default'>00:00:22:385</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -345,22 +381,22 @@ eventsCount: 5,
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.loginPageSteps.user_is_on_home_page()">
+              <div class="step pass-bg" title="parallel.loginPageSteps.user_is_on_home_page()">
                 <span>Given user is on Home Page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.loginPageSteps.user_is_on_login_page()">
+              <div class="step pass-bg" title="parallel.loginPageSteps.user_is_on_login_page()">
                 <span>Given user is on login page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.loginPageSteps.user_gets_the_title_of_the_page()">
+              <div class="step pass-bg" title="parallel.loginPageSteps.user_gets_the_title_of_the_page()">
                 <span>When user gets the title of the page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.loginPageSteps.page_title_should_be(java.lang.String)">
+              <div class="step pass-bg" title="parallel.loginPageSteps.page_title_should_be(java.lang.String)">
                 <span>Then page title should be "Üye Giriş Sayfası & Üye Ol - Hepsiburada"</span>
       <div>
       </div>
@@ -371,23 +407,23 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="26"><span class="badge log pass-bg mr-2">Pass</span>Forgot Password link</div>
+        <div class="node" id="26"><span class="badge log pass-bg mr-2">Pass</span>yardıma mı ihtiyacınız var link</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.loginPageSteps.user_is_on_home_page()">
+              <div class="step pass-bg" title="parallel.loginPageSteps.user_is_on_home_page()">
                 <span>Given user is on Home Page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.loginPageSteps.user_is_on_login_page()">
+              <div class="step pass-bg" title="parallel.loginPageSteps.user_is_on_login_page()">
                 <span>Given user is on login page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.loginPageSteps.forgot_your_password_link_should_be_displayed()">
-                <span>Then forgot your password link should be displayed</span>
+              <div class="step pass-bg" title="parallel.loginPageSteps.yardıma_mı_ihtiyacınız_var_link_should_be_displayed()">
+                <span>Then yardıma mı ihtiyacınız var link should be displayed</span>
       <div>
       </div>
               </div>
@@ -406,7 +442,105 @@ eventsCount: 5,
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-        </div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Regression</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Regression</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='26'>yardıma mı ihtiyacınız var link</a>
+<div class="">
+<span class="badge badge-default">Login page feature.yardıma mı ihtiyacınız var link</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@Smoke</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Smoke</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:10 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Add product to cart</a>
+<div class="">
+<span class="badge badge-default">CartPage Feature.Add product to cart</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:44 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='17'>Login page title</a>
+<div class="">
+<span class="badge badge-default">Login page feature.Login page title</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
       </div>
     </div>
   </div>
